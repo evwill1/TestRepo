@@ -56,15 +56,57 @@ print(ls)
 # Slicing & Looping through Lists
 
 # Slicing
+list = ["potatoes", "grapes", "milk", "eggs", "bread", "oranges"]
+print(list[1:3])
+print(list[:3])
+print(list[1:])
+print(list[1:6:2])
+
 
 # Looping
 
 # For ... in loop
+for element in list:
+    print(element) #print 1 element per line
 
 # Using range() when you need indices
+for i in range(len(list)):
+    print(i, list[i])
 
+names = ["Alice", "Bob", "Jane"]
+
+for name in names:
+    print("Hello, " , name, sep="")
 # Advanced List Operation
+numbers = [5, 2, 9, 1, 8, 4, 3, 2, 7, 3]
+food = ["broccoli", "apple", "lettuce", "cucumber", "tomato", "raspberry", "onion", "dill", "basil"]
 
 # .sort() - changes list in place
+numbers.sort()
+print(numbers)
+food.sort()
+print(food)
+numbers.sort(reverse=True)
+print(numbers)
 
 # .sorted() - 
+sorted_numbers = sorted(numbers)
+print(numbers)
+print(sorted_numbers)
+
+# .reverse()
+numbers.reverse()
+print(numbers)
+food.reverse()
+print(food)
+
+# min(), max(), sum()
+print(min(numbers))
+print(max(numbers))
+print(sum(numbers))
+
+# .index()
+onion = food.index("onion")
+print(onion) #reverse and then count 0, 1, 2 onion = index 2
+three_index = numbers.index(3)
+print(three_index) #sorted and then count to first 3. 0, 1, 2, 3
